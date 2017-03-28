@@ -1,0 +1,1516 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description></description>
+  <groupId>f0e3fc68-015a-1000-d2f8-d960e93e4b30</groupId>
+  <name>MQTT-MongoDB</name>
+  <snippet>
+    <connections>
+      <id>fbea6948-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fbe7514b-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+      <selectedRelationships>Message</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>f1a9caf2-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>fbeb2f2b-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>f1a864ff-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name>MQTT-OUT</name>
+      <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+      <selectedRelationships>matched</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fbe7514b-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>fc126116-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fc115e2e-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+      <selectedRelationships>Message</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fbb51250-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>fc12e364-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fbb54656-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name>MQTT-IN</name>
+      <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+      <selectedRelationships>matched</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fc115e2e-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>103ef8a2-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>1018d558-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>103ba146-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>104015c3-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>100844ee-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>1018d558-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>10514571-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>103ba146-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+      <selectedRelationships>matched</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>104fb6db-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>105177c9-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>104fb6db-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+      <selectedRelationships>matched</selectedRelationships>
+      <source>
+        <groupId>f0e3fc68-015a-1000-0000-000000000000</groupId>
+        <id>fbe7514b-015a-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <processors>
+      <id>f1a864ff-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>448.1525935656151</x>
+        <y>0.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>50</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Broker URI</key>
+            <value>
+              <name>Broker URI</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>
+              <name>Client ID</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+            <value>
+              <name>Last Will Topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+            <value>
+              <name>Last Will Message</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+            <value>
+              <name>Last Will Retain</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+            <value>
+              <name>Last Will QoS Level</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>
+              <name>Session state</name>
+            </value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>
+              <name>MQTT Specification Version</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>
+              <name>Connection Timeout (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>
+              <name>Keep Alive Interval (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Topic</key>
+            <value>
+              <name>Topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>
+              <name>Quality of Service(QoS)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Retain Message</key>
+            <value>
+              <name>Retain Message</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Broker URI</key>
+            <value>tcp://192.168.0.152:1883</value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>nifi-internet-write</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>30</value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>60</value>
+          </entry>
+          <entry>
+            <key>Topic</key>
+            <value>BEEVA-06/${mqtt.topic}</value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Retain Message</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>50</runDurationMillis>
+        <schedulingPeriod>5 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>0 sec</yieldDuration>
+      </config>
+      <name>WRITE-Internet</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.mqtt.PublishMQTT</type>
+    </processors>
+    <processors>
+      <id>f1a9caf2-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>6.100250244140511</x>
+        <y>3.7397077044050775</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Broker URI</key>
+            <value>
+              <name>Broker URI</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>
+              <name>Client ID</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+            <value>
+              <name>Last Will Topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+            <value>
+              <name>Last Will Message</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+            <value>
+              <name>Last Will Retain</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+            <value>
+              <name>Last Will QoS Level</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>
+              <name>Session state</name>
+            </value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>
+              <name>MQTT Specification Version</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>
+              <name>Connection Timeout (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>
+              <name>Keep Alive Interval (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Topic Filter</key>
+            <value>
+              <name>Topic Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>
+              <name>Quality of Service(QoS)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Queue Size</key>
+            <value>
+              <name>Max Queue Size</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Broker URI</key>
+            <value>tcp://localhost:1883</value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>nifi-local-read</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>30</value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>60</value>
+          </entry>
+          <entry>
+            <key>Topic Filter</key>
+            <value>#</value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Max Queue Size</key>
+            <value>100</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>5 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>READ-Local</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>Message</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.mqtt.ConsumeMQTT</type>
+    </processors>
+    <processors>
+      <id>fbb51250-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>435.03573608398426</x>
+        <y>576.4321594238281</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Broker URI</key>
+            <value>
+              <name>Broker URI</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>
+              <name>Client ID</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+            <value>
+              <name>Last Will Topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+            <value>
+              <name>Last Will Message</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+            <value>
+              <name>Last Will Retain</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+            <value>
+              <name>Last Will QoS Level</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>
+              <name>Session state</name>
+            </value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>
+              <name>MQTT Specification Version</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>
+              <name>Connection Timeout (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>
+              <name>Keep Alive Interval (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Topic Filter</key>
+            <value>
+              <name>Topic Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>
+              <name>Quality of Service(QoS)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Queue Size</key>
+            <value>
+              <name>Max Queue Size</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Broker URI</key>
+            <value>tcp://192.168.0.152:1883</value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>nifi-internet-read</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>30</value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>60</value>
+          </entry>
+          <entry>
+            <key>Topic Filter</key>
+            <value>BEEVA-06/#</value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Max Queue Size</key>
+            <value>100</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>5 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>READ-Internet</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>Message</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.mqtt.ConsumeMQTT</type>
+    </processors>
+    <processors>
+      <id>fbb54656-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>578.7086791992188</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Broker URI</key>
+            <value>
+              <name>Broker URI</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>
+              <name>Client ID</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+            <value>
+              <name>Last Will Topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+            <value>
+              <name>Last Will Message</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+            <value>
+              <name>Last Will Retain</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+            <value>
+              <name>Last Will QoS Level</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>
+              <name>Session state</name>
+            </value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>
+              <name>MQTT Specification Version</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>
+              <name>Connection Timeout (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>
+              <name>Keep Alive Interval (seconds)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Topic</key>
+            <value>
+              <name>Topic</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>
+              <name>Quality of Service(QoS)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Retain Message</key>
+            <value>
+              <name>Retain Message</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Broker URI</key>
+            <value>tcp://localhost:1883</value>
+          </entry>
+          <entry>
+            <key>Client ID</key>
+            <value>nifi-local-write</value>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Last Will Topic</key>
+          </entry>
+          <entry>
+            <key>Last Will Message</key>
+          </entry>
+          <entry>
+            <key>Last Will Retain</key>
+          </entry>
+          <entry>
+            <key>Last Will QoS Level</key>
+          </entry>
+          <entry>
+            <key>Session state</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>MQTT Specification Version</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Connection Timeout (seconds)</key>
+            <value>30</value>
+          </entry>
+          <entry>
+            <key>Keep Alive Interval (seconds)</key>
+            <value>60</value>
+          </entry>
+          <entry>
+            <key>Topic</key>
+            <value>${mqtt.topic:substringAfter('/')}</value>
+          </entry>
+          <entry>
+            <key>Quality of Service(QoS)</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Retain Message</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>50</runDurationMillis>
+        <schedulingPeriod>5 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>MQTT-Local</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.mqtt.PublishMQTT</type>
+    </processors>
+    <processors>
+      <id>fbe7514b-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>247.7552160383957</x>
+        <y>221.39410356290236</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>
+              <name>Routing Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>humidity</key>
+            <value>
+              <name>humidity</name>
+            </value>
+          </entry>
+          <entry>
+            <key>temperature</key>
+            <value>
+              <name>temperature</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>Route to 'match' if any matches</value>
+          </entry>
+          <entry>
+            <key>humidity</key>
+            <value>${mqtt.topic:contains('/humidity')}</value>
+          </entry>
+          <entry>
+            <key>temperature</key>
+            <value>${mqtt.topic:contains('temperature')}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>EVENT_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>FILTER-Sensors</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>matched</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>unmatched</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+    </processors>
+    <processors>
+      <id>fc115e2e-015a-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>247.575577245629</x>
+        <y>366.02416976508584</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>
+              <name>Routing Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>led</key>
+            <value>
+              <name>led</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>Route to 'match' if any matches</value>
+          </entry>
+          <entry>
+            <key>led</key>
+            <value>${mqtt.topic:contains('/LED')}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>EVENT_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>FILTER-Actuators</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>matched</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>unmatched</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+    </processors>
+    <processors>
+      <id>100844ee-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>864.5077297347837</x>
+        <y>642.7066454836012</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Mongo URI</key>
+            <value>
+              <name>Mongo URI</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Mongo Database Name</key>
+            <value>
+              <name>Mongo Database Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Mongo Collection Name</key>
+            <value>
+              <name>Mongo Collection Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>ssl-context-service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>ssl-context-service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>ssl-client-auth</key>
+            <value>
+              <name>ssl-client-auth</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Mode</key>
+            <value>
+              <name>Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Upsert</key>
+            <value>
+              <name>Upsert</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Update Query Key</key>
+            <value>
+              <name>Update Query Key</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Write Concern</key>
+            <value>
+              <name>Write Concern</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Character Set</key>
+            <value>
+              <name>Character Set</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Mongo URI</key>
+            <value>mongodb://192.168.0.152:27017</value>
+          </entry>
+          <entry>
+            <key>Mongo Database Name</key>
+            <value>IOT</value>
+          </entry>
+          <entry>
+            <key>Mongo Collection Name</key>
+            <value>BEEVA06</value>
+          </entry>
+          <entry>
+            <key>ssl-context-service</key>
+          </entry>
+          <entry>
+            <key>ssl-client-auth</key>
+            <value>NONE</value>
+          </entry>
+          <entry>
+            <key>Mode</key>
+            <value>insert</value>
+          </entry>
+          <entry>
+            <key>Upsert</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Update Query Key</key>
+            <value>_id</value>
+          </entry>
+          <entry>
+            <key>Write Concern</key>
+            <value>ACKNOWLEDGED</value>
+          </entry>
+          <entry>
+            <key>Character Set</key>
+            <value>UTF-8</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PutMongo</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.mongodb.PutMongo</type>
+    </processors>
+    <processors>
+      <id>1018d558-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>857.5143490357909</x>
+        <y>446.36323026085927</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination</key>
+            <value>
+              <name>Destination</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Null Value</key>
+            <value>
+              <name>Null Value</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Attributes List</key>
+            <value>thing_id,measure,value,timestamp</value>
+          </entry>
+          <entry>
+            <key>Destination</key>
+            <value>flowfile-content</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Null Value</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>AttributesToJSON</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
+    </processors>
+    <processors>
+      <id>103ba146-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>854.7943420081897</x>
+        <y>251.7435956414839</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>measure</key>
+            <value>
+              <name>measure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>thing_id</key>
+            <value>
+              <name>thing_id</name>
+            </value>
+          </entry>
+          <entry>
+            <key>timestamp</key>
+            <value>
+              <name>timestamp</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>measure</key>
+            <value>${mqtt.topic:substringAfter('/')}</value>
+          </entry>
+          <entry>
+            <key>thing_id</key>
+            <value>${mqtt.topic:substringBefore('/')}</value>
+          </entry>
+          <entry>
+            <key>timestamp</key>
+            <value>${now():toNumber()}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>UpdateAttribute</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+    </processors>
+    <processors>
+      <id>104fb6db-015b-1000-0000-000000000000</id>
+      <parentGroupId>f0e3fc68-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>855.4507016048078</x>
+        <y>62.72558346916591</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Character Set</key>
+            <value>
+              <name>Character Set</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum Buffer Size</key>
+            <value>
+              <name>Maximum Buffer Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum Capture Group Length</key>
+            <value>
+              <name>Maximum Capture Group Length</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Canonical Equivalence</key>
+            <value>
+              <name>Enable Canonical Equivalence</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Case-insensitive Matching</key>
+            <value>
+              <name>Enable Case-insensitive Matching</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Permit Whitespace and Comments in Pattern</key>
+            <value>
+              <name>Permit Whitespace and Comments in Pattern</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable DOTALL Mode</key>
+            <value>
+              <name>Enable DOTALL Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Literal Parsing of the Pattern</key>
+            <value>
+              <name>Enable Literal Parsing of the Pattern</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Multiline Mode</key>
+            <value>
+              <name>Enable Multiline Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Unicode-aware Case Folding</key>
+            <value>
+              <name>Enable Unicode-aware Case Folding</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Unicode Predefined Character Classes</key>
+            <value>
+              <name>Enable Unicode Predefined Character Classes</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable Unix Lines Mode</key>
+            <value>
+              <name>Enable Unix Lines Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Capture Group 0</key>
+            <value>
+              <name>Include Capture Group 0</name>
+            </value>
+          </entry>
+          <entry>
+            <key>extract-text-enable-repeating-capture-group</key>
+            <value>
+              <name>extract-text-enable-repeating-capture-group</name>
+            </value>
+          </entry>
+          <entry>
+            <key>value</key>
+            <value>
+              <name>value</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Character Set</key>
+            <value>UTF-8</value>
+          </entry>
+          <entry>
+            <key>Maximum Buffer Size</key>
+            <value>1 MB</value>
+          </entry>
+          <entry>
+            <key>Maximum Capture Group Length</key>
+            <value>1024</value>
+          </entry>
+          <entry>
+            <key>Enable Canonical Equivalence</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable Case-insensitive Matching</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Permit Whitespace and Comments in Pattern</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable DOTALL Mode</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable Literal Parsing of the Pattern</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable Multiline Mode</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable Unicode-aware Case Folding</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable Unicode Predefined Character Classes</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Enable Unix Lines Mode</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Include Capture Group 0</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>extract-text-enable-repeating-capture-group</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>value</key>
+            <value>(.*)</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>ExtractText</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>matched</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>unmatched</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.ExtractText</type>
+    </processors>
+  </snippet>
+  <timestamp>03/28/2017 09:05:20 UTC</timestamp>
+</template>
