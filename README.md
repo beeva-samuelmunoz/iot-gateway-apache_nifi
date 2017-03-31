@@ -121,7 +121,7 @@ This is the basic architecture I will use in the experiment.
 
 ![Experiment schema](img/schema.png)
 
-_Note:_ all the examples are loadable into the platform through a web interface. The mechanism to share the logic are templates [templates](https://www.youtube.com/watch?v=PpmL-IMoCnU).
+_Note:_ all the examples are loadable into the platform through a web interface. The mechanism to share the logic are [templates](https://www.youtube.com/watch?v=PpmL-IMoCnU).
 
 
 
